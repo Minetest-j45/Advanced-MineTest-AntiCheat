@@ -1,4 +1,3 @@
-register on placenode if not player pointed thing pos = node pos then kick
 minetest.register_on_placenode(function(pos, newnode, placer, oldnode, itemstack, pointed_thing)
     if not placer then return end
     if not pos == pointed_thing.under
