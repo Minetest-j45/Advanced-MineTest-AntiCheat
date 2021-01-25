@@ -1,6 +1,6 @@
 # anticheat
-A minetest mod that adds the following anticheats:\n
-∼antiscaffold
-∼antifly
-∼antinoclip
-∼antikillaura
+A minetest mod that adds the following anticheats:<br />
+∼antiscaffold<br />
+∼antifly<br />
+∼antinoclip<br />
+∼antikillaura<br />
