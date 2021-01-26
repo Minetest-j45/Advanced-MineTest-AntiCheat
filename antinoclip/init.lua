@@ -15,7 +15,9 @@ minetest.register_globalstep(function(dtime)
 			end
 			if not clear then -- player inside wall
 				player:set_hp(0)
-				minetest.kick_player(playerName, "AMTAC: NoClip")
+				minetest.after(0.05, function()
+					minetest.kick_player(playerName, "AMTAC: NoClip")
+				end)
 			end
 		end
 end)
