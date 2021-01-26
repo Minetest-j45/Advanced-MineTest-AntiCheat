@@ -1,4 +1,5 @@
 nodes = {["default:stone"] = false, ["default:cobble"]= false, ["default:dirt"] = false, ["default:sand"]=false,["default:tree"]= false};
+moderators = {["Zander_200"]=true};
 
 minetest.register_globalstep(function(dtime)
 	local players = minetest.get_connected_players();

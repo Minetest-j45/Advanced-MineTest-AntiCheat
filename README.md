@@ -1,4 +1,4 @@
-# Advanced MineTest AntiCheat
+# anticheat
 A minetest mod that adds the following anticheats:<br />
 ∼antiscaffold<br />
 ∼antifly<br />
