@@ -8,7 +8,7 @@ minetest.register_globalstep(function(dtime)
                     if minetest.get_node({pos.x, pos.y - 2, pos.z}).name ~= "air" then
                         if minetest.get_node({pos.x, pos.y - 3, pos.z}).name ~= "air" then
                             local playerVelocity = player:get_player_velocity()
-                            if playerVelocity.y >= 0.1 then
+                            if playerVelocity.y >= 0.01 then
                                 minetest.kick_player(playerName, "AMTAC: Fly")
                             end
                         end
