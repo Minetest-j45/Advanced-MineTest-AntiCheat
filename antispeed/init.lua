@@ -3,7 +3,7 @@ minetest.register_globalstep(function(dtime)
         for _,player in pairs(players) do
             if(player) then
                 local playerName = player:get_player_name();
-                local playerVelocity = player:get_velocity()
+                local playerVelocity = player:get_player_velocity()
                 if playerVelocity.x > 5 then
                     minetest.kick_player(playerName, "AMTAC: Speed")
                 end
