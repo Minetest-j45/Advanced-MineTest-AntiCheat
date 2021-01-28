@@ -3,9 +3,9 @@ local oldpos = {}
 local function noclip_check(player)
 	local name = player:get_player_name()
 	local pos = player:get_pos()
-	-- if minetest.check_player_privs(name, {noclip = true}) then
-		-- return true
-	-- end
+	if minetest.check_player_privs(name, {noclip = true}) then
+		return true
+	end
 	if minetest.get_node(pos).name ~= "air" and minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z}).name ~= "air" then
 		local v = player:get_velocity()
 		if v.x ~= 0 or v.y ~= 0 or v.z ~= 0 then
