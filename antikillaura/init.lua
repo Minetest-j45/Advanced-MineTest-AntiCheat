@@ -1,3 +1,8 @@
-on punchplayer if not hitterget poointedthing pos = player get pos then kick hitter
-minetest.register_on_punchplayer(function(player, hitter, time_from_last_punch, tool_capabilities, dir, damage))
-minetest.kick_player(name, Using killaura hacks.)
+minetest.register_on_punchplayer(function(player, hitter, time_from_last_punch, tool_capabilities, dir, damage)
+        local control = hitter:get_player_control()
+
+        if not control.LMB then
+                minetest.kick_player(hitter:get_player_name(), "[AMTAC]: Killaura!")
+                minetest.log("[AMTAC]: " .. hitter:get_player_name() .. " was caught using killaura")
+        end
+end)
