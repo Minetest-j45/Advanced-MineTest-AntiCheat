@@ -1,10 +1,9 @@
 minetest.register_on_placenode(function(pos, newnode, placer, oldnode, itemstack, pointed_thing)
-    if placer then 
-        print("pos: " .. " " .. pos.x .. " " .. pos.y .. " " .. pos.z)
-        print("pt: " .. pointed_thing.above.x .. " " .. pointed_thing.above.y .. " " .. pointed_thing.above.z)
-        if not pos == pointed_thing.above then
-            minetest.set_node(pos, {name="air"})
-            minetest.kick_player(placer:get_player_name(), "AMTAC: Scaffold")
+        if placer:is_player() then
+                local control = placer:get_player_control()
+
+                if not control.place then
+                        minetest.kick_player(placer:get_player_name(), "AMTAC: Scaffold!")
+                end
         end
-    end
 end)
