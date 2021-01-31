@@ -1,5 +1,6 @@
 minetest.register_on_placenode(function(pos, newnode, placer, oldnode, itemstack, pointed_thing)
         if placer:is_player() then
+                local playerName = placer:get_player_name()
                 local control = placer:get_player_control()
                 local pre540 = false
 
