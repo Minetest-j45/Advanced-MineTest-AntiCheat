@@ -7,15 +7,19 @@ minetest.register_globalstep(function(dtime)
                 local playerVelocity = player:get_player_velocity()
                 if playerVelocity.x > SpeedLimit then
                     minetest.kick_player(playerName, "AMTAC: Speed")
+		    minetest.log("[AMTAC]: " playerName .. " was caught using speed hacks")
                 end
                 if playerVelocity.x < -SpeedLimit then
                     minetest.kick_player(playerName, "AMTAC: Speed")
+		    minetest.log("[AMTAC]: " playerName .. " was caught using speed hacks")
                 end
                 if playerVelocity.z > SpeedLimit then
                     minetest.kick_player(playerName, "AMTAC: Speed")
+		    minetest.log("[AMTAC]: " playerName .. " was caught using speed hacks")
                 end
                 if playerVelocity.z < -SpeedLimit then
                     minetest.kick_player(playerName, "AMTAC: Speed")
+		    minetest.log("[AMTAC]: " playerName .. " was caught using speed hacks")
                 end
             end
 		end
