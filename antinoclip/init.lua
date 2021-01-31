@@ -18,6 +18,8 @@ minetest.register_globalstep(function(dtime)
 				minetest.after(0.05, function()
 					minetest.kick_player(playerName, "AMTAC: NoClip")
 				end)
+				
+				minetest.log("[AMTAC]: " .. playerName .. " was caught using NoClip")
 			end
 		end
 end)
