@@ -10,6 +10,8 @@ minetest.register_globalstep(function(dtime)
                             local playerVelocity = player:get_player_velocity()
                             if playerVelocity.y >= 0.01 then
                                 minetest.kick_player(playerName, "AMTAC: Fly")
+				
+				minetest.log("[AMTAC]: " .. playerName .. " was caught using Fly")
                             end
                         end
                     end
