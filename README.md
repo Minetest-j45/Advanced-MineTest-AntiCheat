@@ -1,6 +1,6 @@
 ## Advanced MineTest AntiCheat
 A minetest mod that adds the following anticheats:<br />
-∼antiscaffold<br />
+∼antiscaffold (Warning: Unstable with minetestserver-v5.3.0)<br />
 ∼antifly<br />
 ∼antinoclip<br />
 ∼antikillaura<br />
