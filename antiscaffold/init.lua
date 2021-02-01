@@ -8,13 +8,13 @@ minetest.register_on_placenode(function(pos, newnode, placer, oldnode, itemstack
 
                 if pre540 ~= true then
                         if not control.place then
-                                minetest.kick_player(placer:get_player_name(), "AMTAC: Scaffold or other abnormal block placement!")
-                                minetest.log("[AMTAC]: .. " playerName .. " was caught using scaffold hacks")
+                                minetest.kick_player(placer:get_player_name(), "AMTAC: Scaffold or other abnormal block placement")
+                                minetest.log("[AMTAC]: .. " playerName .. " was caught using scaffold or other abnormal block placement hacks")
                         end
                 else
                         if not control.RMB then
-                                minetest.kick_player(placer:get_player_name(), "AMTAC: Scaffold or other abnormal block placement!")
-                                minetest.log("[AMTAC]: .. " playerName .. " was caught using scaffold hacks")
+                                minetest.kick_player(placer:get_player_name(), "AMTAC: Scaffold or other abnormal block placement")
+                                minetest.log("[AMTAC]: .. " playerName .. " was caught using scaffold or other abnormal block placement hacks")
                         end
                 end
         end
