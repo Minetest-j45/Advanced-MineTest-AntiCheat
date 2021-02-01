@@ -11,7 +11,7 @@ minetest.register_globalstep(function(dtime)
                             if playerVelocity.y >= 0.01 then
                                 minetest.kick_player(playerName, "AMTAC: Fly")
 				
-				minetest.log("[AMTAC]: " .. playerName .. " was caught using Fly")
+				minetest.log("[AMTAC]: " .. playerName .. " was caught using fly hacks")
                             end
                         end
                     end
