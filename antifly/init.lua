@@ -35,6 +35,7 @@ minetest.register_globalstep(function(dtime)
 				player:set_pos(oldpos[name])
 			end
 			minetest.log("action", "[AMTAC] Fly detected for " .. name)
+
 			if not oldpos[name] then oldpos[name] = pos end
 			minetest.after(3, posdel, player)
 		end
