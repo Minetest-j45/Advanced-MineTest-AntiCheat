@@ -24,7 +24,7 @@ minetest.register_globalstep(function(dtime)
 			if oldpos[name] then
 				player:set_pos(oldpos[name])
 			end
-			minetest.log("action", "[AMTAC] Noclip detected for " .. name)
+			minetest.log("action", "[AMTAC]: " .. name .. " was caught using noclip hacks")
 		else
 			oldpos[name] = player:get_pos()
 		end
