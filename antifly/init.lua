@@ -8,7 +8,7 @@ local function fly_check(player)
 	end
 	if minetest.get_node(pos).name == "air" and minetest.get_node({x = pos.x, y = pos.y - 1, z = pos.z}).name == "air" then
 		local airnodes = minetest.find_nodes_in_area({x = pos.x - 2, y = pos.y - 2, z = pos.z - 2}, {x = pos.x + 2, y = pos.y + 2, z = pos.z + 2}, {"air"})
-		local v = player:get_velocity()
+		local v = player:get_player_velocity()
 		if #airnodes >= 125 and v.y >= 0 then
 			return false
 		end
