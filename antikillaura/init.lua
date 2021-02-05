@@ -7,7 +7,6 @@ minetest.register_on_punchplayer(function(player, hitter, time_from_last_punch, 
         local control = hitter:get_player_control()
 
         if not control.LMB then
-                minetest.kick_player(hitter:get_player_name(), "[AMTAC]: Killaura!")
-                minetest.log("action", "[AMTAC]: " .. hitter:get_player_name() .. " was caught using killaura")
+                        amtac.handle_cheater(hitter, "Killaura", "kick", {log = true, kill = true, notify_all = true})
         end
 end)
