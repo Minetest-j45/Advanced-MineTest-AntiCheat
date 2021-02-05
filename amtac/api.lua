@@ -10,7 +10,7 @@ function amtac.ban(player, reason)
 end
 
 function amtac.notify_all_of_cheater(player, reason)
-        minetest.chat_send_all(player:get_player_name() .. " was caught using " .. reason:lower())
+        minetest.chat_send_all(minetest.colorize("#FF0000", "[AMTAC] " .. player:get_player_name() .. " was caught using " .. reason:lower()))
 end
 
 function amtac.handle_cheater(player, reason, options)
