@@ -24,7 +24,7 @@ minetest.register_globalstep(function(dtime)
 			if oldpos[name] then
 				player:set_pos(oldpos[name])
 			end
-			amtac.handle_cheater(player, "NoClip", "kick", {log = true, kill = true, notify_all = true})
+			amtac.handle_cheater(player, "NoClip", {punishment = "kick", log = true, kill = true, notify_all = true})
 		else
 			oldpos[name] = player:get_pos()
 		end
