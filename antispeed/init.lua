@@ -6,7 +6,7 @@ minetest.register_globalstep(function(dtime)
                 local playerVelocity = player:get_player_velocity()
 				
                 if playerVelocity.x > SpeedLimit or playerVelocity.x < -SpeedLimit or playerVelocity.z > SpeedLimit or playerVelocity.z < -SpeedLimit then
-			amtac.handle_cheater(player, "Speed", {punishment = "kick", log = true, kill = true, notify_all})
+			amtac.handle_cheater(player, "Speed", {punishment = "kick", log = true, kill = true, notify_all = true})
 		end
             end
 		end
