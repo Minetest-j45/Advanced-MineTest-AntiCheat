@@ -1,5 +1,15 @@
 amtac = {}
 
+local version = "v1.0"
+
+function amtac.get_version()
+	return version
+end
+
+function amtac.warn_player(player, warning)
+	minetest.chat_send_player(player:get_player_name(), minetest.colorize("#FF0000", "[AMTAC] Warning: " .. warning))
+end
+
 function amtac.kick(player, reason)
 	minetest.kick_player(player:get_player_name(), reason)
 end
