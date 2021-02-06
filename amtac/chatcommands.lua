@@ -4,21 +4,33 @@ minetest.register_privilege("amtac", {
     give_to_admin = false
 })
 
-minetest.register_chatcommand("amtac_warn", {
-    description = "Warn a player",
-    params = "<player> <message>",
+minetest.register_chatcommand("amtac", {
+    description = "Commands for your Anticheat Bot",
+    params = "<command> <target> <reason>",
     privs = {amtac = true},
 
     func = function(name, param)
-        local player = param:split(" ")[1]
-        local message = param:match(" (.*)")
+        local command = param:split(" ")[1]
+        local target = param:split(" ")[2]
+        local reason_with_targetname = param:match(" (.*)")
+        local reason = reason_with_targetname:match(" (.*)")
 
-        if not player or not message then return end
+        if not target or not command or not reason then return end
 
-        local player_data = minetest.get_player_by_name(player)
+        local player = minetest.get_player_by_name(target)
 
-        amtac.warn_player(player_data, message)
+        if command == "warn" then
+            amtac.warn_player(player, reason)
+            
+            return true, "[AMTAC] " .. "Warned " .. target
+        elseif command == "kick" then
+            amtac.kick(player, reason)
 
-        return true, "[AMTAC] " .. "Warned " .. player
+            return true, "[AMTAC] " .. "Kicked " .. target
+        elseif command == "ban" then
+            amtac.ban(player, reason)
+
+            return true, "[AMTAC] " .. "Banned " .. target
+        end
     end
 })
