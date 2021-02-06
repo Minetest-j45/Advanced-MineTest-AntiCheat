@@ -3,6 +3,7 @@ local oldpos = {}
 local function fly_check(player)
 	local name = player:get_player_name()
 	local pos = player:get_pos()
+	if not pos then return true end
 	if minetest.check_player_privs(name, {fly = true}) then
 		return true
 	end
@@ -34,7 +35,7 @@ minetest.register_globalstep(function(dtime)
 			if oldpos[name] then
 				player:set_pos(oldpos[name])
 			end
-			amtac.handle_cheater(player, "Fly", {punishment = "kick", log = true, kill = true, notify_all = true})
+			amtac.handle_cheater(player, "Fly", {})
 
 			if not oldpos[name] then oldpos[name] = pos end
 			minetest.after(3, posdel, player)

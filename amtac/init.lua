@@ -1,5 +1,3 @@
-local modpath = minetest.get_modpath("amtac")
-
-if modpath ~= nil then modpath = modpath .. "/" end
+local modpath = minetest.get_modpath(minetest.get_current_modname()) .. "/"
 
 dofile(modpath .. "api.lua")
