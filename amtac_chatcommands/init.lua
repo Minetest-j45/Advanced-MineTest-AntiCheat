@@ -11,8 +11,7 @@ minetest.register_chatcommand("amtac", {
 	func = function(name, param)
 		local command = param:split(" ")[1]
 		local target = param:split(" ")[2]
-		local reason_with_targetname = param:match(" (.*)")
-		local reason = reason_with_targetname:match(" (.*)")
+		local reason = param:match(" %a* (.*)")
 
 		local player = minetest.get_player_by_name(target)
 		if not target or not command or not reason or not player then return end
