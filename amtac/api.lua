@@ -5,8 +5,8 @@ function amtac.kick(player, reason)
 end
 
 function amtac.ban(player, reason)
-        minetest.kick_player(player:get_player_name(), reason)
         minetest.ban_player(player:get_player_name(), reason)
+        minetest.kick_player(player:get_player_name(), reason)
 end
 
 function amtac.notify_all_of_cheater(player, reason)
