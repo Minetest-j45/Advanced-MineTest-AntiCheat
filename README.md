@@ -20,3 +20,6 @@ Kick a player for using scaffold hacks or any other type of abnormal block place
 
 ## antispeed
 Reset a player's position for using speed hacks
+
+## Contact
+* Discord: https://discord.gg/H2Brz3c4fm
